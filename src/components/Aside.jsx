@@ -1,7 +1,7 @@
 import React from "react";
 import "./Aside.css";
 
-export default function Aside({
+export function Aside({
     notes,
     currentNote,
     setCurrentNoteId,
