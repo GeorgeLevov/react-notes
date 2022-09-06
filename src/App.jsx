@@ -3,7 +3,7 @@ import "./App.css";
 import Split from "react-split";
 import { nanoid } from "nanoid";
 import Aside from "./components/Aside";
-import Editor from "./components/Editor";
+import { Editor } from "./components/Editor";
 
 const App = () => {
     const noteStorage = localStorage.getItem("react_markdown_notes");
