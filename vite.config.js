@@ -5,6 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
     plugins: [react()],
     minify: false,
-    mode: developement,
-    minifySyntax: false
+    minify: false,
+    minifyIdentifiers: true,
+    minifySyntax: true,
 });
