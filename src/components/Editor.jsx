@@ -1,14 +1,14 @@
 import { useState } from "react";
 import ReactMde from "react-mde";
-import Showdown from "showdown";
+import { Converter } from "showdown";
 
 import "./Editor.css";
 import "react-mde/lib/styles/css/react-mde-all.css";
 
-const Editor = ({ currentNote, updateNote }) => {
+export default function Editor({ currentNote, updateNote }) {
     const [selectedTab, setSelectedTab] = useState("write");
-
-    const converter = new Showdown.Converter({
+    console.log(typeof Converter);
+    const converter = new Converter({
         tables: true,
         simplifiedAutoLink: true,
         strikethrough: true,
@@ -30,6 +30,4 @@ const Editor = ({ currentNote, updateNote }) => {
             />
         </section>
     );
-};
-
-export default Editor;
+}
