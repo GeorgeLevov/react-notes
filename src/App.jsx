@@ -6,7 +6,7 @@ import Aside from "./components/Aside";
 import Editor from "./components/Editor";
 
 function App() {
-    const noteStorage = localStorage.getItem("notes");
+    const noteStorage = localStorage.getItem("react_markdown_notes");
 
     const [notes, setNotes] = useState(() => JSON.parse(noteStorage) || []);
 
@@ -43,7 +43,7 @@ function App() {
     }
 
     useEffect(() => {
-        localStorage.setItem("notes", JSON.stringify(notes));
+        localStorage.setItem("react_markdown_notes", JSON.stringify(notes));
     }, [notes]);
 
     const findCurrentNote = () =>
