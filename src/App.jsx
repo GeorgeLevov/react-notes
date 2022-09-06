@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Split from "react-split";
 import { nanoid } from "nanoid";
-import { Aside } from "./components/Aside";
-import { Editor } from "./components/Editor";
+import Aside from "./components/Aside";
+import Editor from "./components/Editor";
 
-export function App() {
+const App = () => {
     const noteStorage = localStorage.getItem("react_markdown_notes");
 
     const [notes, setNotes] = useState(() => JSON.parse(noteStorage) || []);
@@ -80,4 +80,6 @@ export function App() {
             )}
         </div>
     );
-}
+};
+
+export default App;
