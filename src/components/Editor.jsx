@@ -5,7 +5,7 @@ import { Converter } from "showdown";
 import "./Editor.css";
 import "react-mde/lib/styles/css/react-mde-all.css";
 
-export function Editor({ currentNote, updateNote }) {
+export default function Editor({ currentNote, updateNote }) {
     const [selectedTab, setSelectedTab] = useState("write");
     const converter = () =>
         new Converter({
