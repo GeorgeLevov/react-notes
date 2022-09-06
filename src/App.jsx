@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Split from "react-split";
 import { nanoid } from "nanoid";
-import Aside from "./components/Aside";
-import Editor from "./components/Editor";
+import { Aside } from "./components/Aside";
+import { Editor } from "./components/Editor";
 
-function App() {
-    const noteStorage = localStorage.getItem("notes");
+export function App() {
+    const noteStorage = localStorage.getItem("react_markdown_notes");
 
     const [notes, setNotes] = useState(() => JSON.parse(noteStorage) || []);
 
@@ -43,7 +43,7 @@ function App() {
     }
 
     useEffect(() => {
-        localStorage.setItem("notes", JSON.stringify(notes));
+        localStorage.setItem("react_markdown_notes", JSON.stringify(notes));
     }, [notes]);
 
     const findCurrentNote = () =>
@@ -81,5 +81,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
