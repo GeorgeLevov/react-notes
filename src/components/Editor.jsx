@@ -7,14 +7,13 @@ import "react-mde/lib/styles/css/react-mde-all.css";
 
 export default function Editor({ currentNote, updateNote }) {
     const [selectedTab, setSelectedTab] = useState("write");
-    console.log(typeof Converter);
-    const converter = new Converter({
-        tables: true,
-        simplifiedAutoLink: true,
-        strikethrough: true,
-        tasklists: true,
-    });
-
+    const converter = () =>
+        new Converter({
+            tables: true,
+            simplifiedAutoLink: true,
+            strikethrough: true,
+            tasklists: true,
+        });
     return (
         <section className="editor">
             <ReactMde
@@ -23,7 +22,7 @@ export default function Editor({ currentNote, updateNote }) {
                 selectedTab={selectedTab}
                 onTabChange={setSelectedTab}
                 generateMarkdownPreview={(markdown) =>
-                    Promise.resolve(converter.makeHtml(markdown))
+                    Promise.resolve(converter(makeHtml(markdown)))
                 }
                 minEditorHeight={95}
                 heightUnits="vh"
