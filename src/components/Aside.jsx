@@ -1,13 +1,13 @@
 import React from "react";
 import "./Aside.css";
 
-export function Aside({
+const Aside = ({
     notes,
     currentNote,
     setCurrentNoteId,
     newNote,
     deleteNote,
-}) {
+}) => {
     const noteNodes = notes.map((note, index) => (
         <div key={note.id} id={`note_${index}`}>
             <div
@@ -39,4 +39,6 @@ export function Aside({
             {noteNodes}
         </section>
     );
-}
+};
+
+export default Aside;
