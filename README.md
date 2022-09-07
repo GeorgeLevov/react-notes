@@ -17,4 +17,4 @@ The project integrates a few npm packages outside of React/ReactDOM
 -   React Split, a component which creates a resizable split-view: [https://www.npmjs.com/package/react-split](https://www.npmjs.com/package/react-split)
 -   Nanoid, a unique string generator: [https://www.npmjs.com/package/nanoid](https://www.npmjs.com/package/nanoid)
 
-A deployed version of this app can be found [https://react-markdown-notes.netlify.app/](here)
+A deployed version of this app can be found [here](https://react-markdown-notes.netlify.app/)
