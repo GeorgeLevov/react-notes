@@ -5,10 +5,6 @@ import ReactMde from "react-mde";
 // workaround for Minified React error after Vite builds for production, thread:
 // https://lightrun.com/answers/vitejs-vite-encountered-minified-react-error-in-the-production-environment
 const RMDE = ReactMde.default ? ReactMde.default : ReactMde;
-console.log(ReactMde);
-console.log(typeof ReactMde);
-console.log(RMDE);
-console.log(typeof RMDE);
 
 import "./Editor.css";
 import "react-mde/lib/styles/css/react-mde-all.css";
