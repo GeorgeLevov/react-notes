@@ -5,9 +5,9 @@ The list is auto-saved in local storage so your work will survive a page refresh
 
 React features used in the app:
 - Using 3rd party libraries along with React was a first for me, working through incompatibility between package with different versions and then bundling issues when deploying helped give me a better idea of things to be expected when working with a more realistic code base
-- useState hook allows the notes to persist, saving them in state
-- useEffect hook permits the auto-save feature, it keeps localStorage up to date with any edits made
-- React props allow the app to dynamically update, one specific example would be the active(highlighted) note feature, clicking on a note from the side list switches it to be the currently active note and displays that note's contents in the editing pane 
+- **useState** hook allows the notes to persist, saving them in state
+- **useEffect** hook permits the auto-save feature, it keeps localStorage up to date with any edits made
+- React **props** allow the app to dynamically update, one specific example would be the active(highlighted) note feature, clicking on a note from the side list switches it to be the currently active note and displays that note's contents in the editing pane 
  
 
 ## Dependencies :
